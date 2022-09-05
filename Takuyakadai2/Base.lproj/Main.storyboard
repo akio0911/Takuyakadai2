@@ -43,6 +43,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="calculateButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zmI-Lx-QdJ"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GWH-o0-nML">
                                 <rect key="frame" x="109" y="368" width="197" height="21"/>
@@ -55,10 +58,16 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="calculationSegment" destination="kbD-iF-5xn" id="e5j-5O-6nF"/>
+                        <outlet property="inputOne" destination="1TE-VI-xBO" id="WyT-aM-qSF"/>
+                        <outlet property="inputTwo" destination="Wue-xL-70a" id="Gtt-Yw-IuH"/>
+                        <outlet property="resultLabel" destination="GWH-o0-nML" id="Eo5-fP-haS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18.840579710144929" y="83.705357142857139"/>
+            <point key="canvasLocation" x="-309" y="79"/>
         </scene>
     </scenes>
     <resources>
