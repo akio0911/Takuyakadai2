@@ -9,16 +9,11 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var inputOne: UITextField!
-    @IBOutlet weak var inputTwo: UITextField!
-    @IBOutlet weak var calculationSegment: UISegmentedControl!
-    @IBOutlet weak var resultLabel: UILabel!
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
+    @IBOutlet private var inputOne: UITextField!
+    @IBOutlet private var inputTwo: UITextField!
+    @IBOutlet private var calculationSegment: UISegmentedControl!
+    @IBOutlet private var resultLabel: UILabel!
+
 
     @IBAction func calculateButtonPressed(_ sender: UIButton) {
         let inputValueOne = Float(inputOne.text!) ?? 0
