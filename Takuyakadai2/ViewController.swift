@@ -19,27 +19,22 @@ class ViewController: UIViewController {
         let inputValueOne = Float(inputOne.text!) ?? 0
         let inputValueTwo = Float(inputTwo.text!) ?? 0
         let selectedSegment = calculationSegment.selectedSegmentIndex
-        var result: Float
-        
-        if selectedSegment == 0 {
-            result = inputValueOne + inputValueTwo
-            resultLabel.text = String(format: "%.1f", result)
-        } else if selectedSegment == 1 {
-            result = inputValueOne - inputValueTwo
-            resultLabel.text = String(format: "%.1f", result)
-        } else if selectedSegment == 2 {
-            result = inputValueOne * inputValueTwo
-            resultLabel.text = String(format: "%.1f", result)
-        } else {
+
+        switch selectedSegment {
+        case 0:
+            resultLabel.text = String(format: "%.1f", inputValueOne + inputValueTwo)
+        case 1:
+            resultLabel.text = String(format: "%.1f", inputValueOne - inputValueTwo)
+        case 2:
+            resultLabel.text = String(format: "%.1f", inputValueOne * inputValueTwo)
+        case 3:
             if inputValueTwo != 0 {
-                result = inputValueOne / inputValueTwo
-                resultLabel.text = String(format: "%.1f", result)
+                resultLabel.text = String(format: "%.1f", inputValueOne / inputValueTwo)
             } else {
                 resultLabel.text = "割る数には０以外を入力してください"
             }
+        default:
+            fatalError("selectedSegment is invalid.")
         }
-        
-        
     }
 }
-
